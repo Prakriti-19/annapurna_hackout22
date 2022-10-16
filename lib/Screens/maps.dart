@@ -17,8 +17,8 @@ class _HomeState extends State<Home> {
   void saveMyCoordinates() async {
     setState(() {
       UpdateMyCoordinates();
-      update();
-      print('$nextScreenLatitude and$nextScreenLongitude');
+      print("ffe");
+
     });
     }
 
@@ -106,7 +106,7 @@ void update()async{
                                     borderRadius: BorderRadius.circular(20),
                                     color: Colors.white
                                 ),
-                                child: Center(child: Text("Change my location",style: TextStyle(color: Colors.green,fontSize: 16),))
+                                child: Center(child: Text("Change my location",style: TextStyle(color: Colors.green,fontSize: 13),))
                             ),
                           ),
                     )),
@@ -118,43 +118,20 @@ void update()async{
                       width: 170,
                       child: TextButton(
                         onPressed: (){
-                              () {
-                            if (nextScreenLongitude != 0 &&
-                                nextScreenLatitude != 0) {
-                              saveMyCoordinates();
-
-
-                            }
-                            else{
-                              showDialog(context: context, builder: (context){
-                                return AlertDialog(
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(33),
-                                  ),
-                                  content: Text("Please enter a valid location"),
-                                  contentPadding: EdgeInsets.all(30),
-                                );
-
-                              });
-
-                            }
-                          };
+                          update();
                         },
                         child: Container(
                             height: 50,
                             width: 200,
                             decoration: BoxDecoration(
+                                border: Border.all(color: Colors.green),
                                 borderRadius: BorderRadius.circular(20),
                                 color: Colors.green
                             ),
-                            child: Center(child: Text("Save my location",style: TextStyle(color: Colors.white,fontSize: 16),))
+                            child: Center(child: Text("Save my location",style: TextStyle(color: Colors.white,fontSize: 13),))
                         ),
                       ),
-
-
-
                     )),
-
               ],
             ),
           )
