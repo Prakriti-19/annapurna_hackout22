@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
     List<String> date = [];
     List<double> lat = [];
     List<double> long = [];
-    List<String> pid = [];
+    //List<String> pid = [];
     List<String> veg = [];
     List<String> uid = [];
     final user = Provider.of<Usser?>(context);
@@ -74,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               }
                               final documentSnapshotList = snapshot.data!.docs;
                               documentSnapshotList.forEach((element) {
-                              //  url.add(element['url']);
+                                url.add(element['url']);
                                 cap.add(element['capacity']);
                                 veg.add(element['veg']);
                                 date.add(element['date']);
@@ -99,7 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         veg: veg[i],
                                         userid: uid[i],
                                         date: date[i],
-                                        //    url: url[i],
+                                            url: url[i],
                                       ));
 
                                   return GridView.builder(

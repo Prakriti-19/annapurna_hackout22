@@ -53,10 +53,7 @@ class _TileState extends State<Tile> {
                       0.27,
                   child: ClipRRect(
                     borderRadius:BorderRadius.circular(15),
-                    child: Image.asset(
-                      "images/food.jpeg",
-                      fit: BoxFit.cover,
-                    ),
+                    child: Image.network(profile.url,fit: BoxFit.cover,),
                   ),
                 ),
                 SizedBox(

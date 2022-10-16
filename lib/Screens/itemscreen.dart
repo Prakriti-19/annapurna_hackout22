@@ -40,10 +40,7 @@ class _ItemState extends State<Item> {
                     border: Border.all(color: Colors.purpleAccent),
 
                   ),
-                  child: Image.asset(
-                    "images/food.jpeg",
-                    fit: BoxFit.cover,
-                  ),
+                  child:Image.network(profile.url,fit: BoxFit.cover,),
                 ),
                 SizedBox(height: 30,),
                 Text( 'Capacity : ${profile.capacity}',style: TextStyle(

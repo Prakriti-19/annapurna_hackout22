@@ -7,7 +7,7 @@ class Inventory {
   String veg;
   String userid;
   String date;
-  //String url;
+  String url;
   Inventory(
       {
         required this.capacity,
@@ -16,7 +16,7 @@ class Inventory {
         required this.veg,
         required this.userid,
         required this.date,
-      //  required this.url,
+        required this.url,
       });
 }
 class donor_profile{
