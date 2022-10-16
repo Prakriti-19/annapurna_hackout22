@@ -21,8 +21,8 @@ class Inventory {
       //  required this.url,
       });
 }
-class donor{
+class donor_profile{
   String uid;
   String email;
-  donor({required this.email,required this.uid});
+  donor_profile({required this.email,required this.uid});
 }

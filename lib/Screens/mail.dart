@@ -9,7 +9,7 @@ import '../helper/notfound.dart';
 
 class Mail extends StatefulWidget {
 
-  final donor profile;
+  final donor_profile profile;
   Mail({required this.profile});
   @override
   _MailState createState() => _MailState();
@@ -18,7 +18,7 @@ class Mail extends StatefulWidget {
 class _MailState extends State<Mail> {
   @override
   Widget build(BuildContext context) {
-    donor profile = widget.profile;
+    donor_profile profile = widget.profile;
     Future sendemail(String text) async{
       final email='prakritivashishtha517@gmail.com';
      final user=await GoogleAuthApi.signIn();

@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
+import '../classes/database.dart';
 import 'HomeScreen.dart';
 import 'maps.dart';
 
@@ -73,15 +74,12 @@ class _DonateState extends State<Donate> {
         print(url);
         DocumentReference productCollection =
         FirebaseFirestore.instance.collection('Inventory').doc();
-        productCollection.set({
-          'capacity': capacity,
-          'latitude': latitude,
-          'longitude': longitude,
-          'veg': veg,
-          'userid': productCollection.id,
-          'date': date,
-          'productid':"",
-        });
+        await inventory(uid: productCollection.id).updateUserData(capacity, veg,
+         latitude,
+         longitude,
+         date,);
+
+
         uploadPic();
         print("hello3");
         print(url);

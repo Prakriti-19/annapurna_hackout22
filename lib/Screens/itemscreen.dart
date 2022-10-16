@@ -41,15 +41,10 @@ class _ItemState extends State<Item> {
 
                   ),
                   child: Image.asset(
-                    "Images/food.jpeg",
+                    "images/food.jpeg",
                     fit: BoxFit.cover,
                   ),
                 ),
-                SizedBox(height: 30,),
-                Text("Location:  India",style: TextStyle(
-                    fontSize: 20,fontWeight: FontWeight.w500,
-                    color: Color.fromARGB(0xFF, 0x98, 0x31, 0x6A)
-                ),),
                 SizedBox(height: 30,),
                 Text( profile.capacity,style: TextStyle(
                   fontSize: 20,fontWeight: FontWeight.w500,
