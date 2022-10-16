@@ -22,9 +22,9 @@ class _ItemState extends State<Item> {
           alignment: Alignment.center,
           child: Container(
             width: 300,
-            height: 700,
+            height: MediaQuery.of(context).size.height * 0.65,
             decoration: BoxDecoration(
-              border: Border.all(color: Color.fromARGB(0xFF, 0x98, 0x31, 0x6A),width: 2),
+              border: Border.all(color: Color.fromARGB(0xFF, 0x98, 0x31, 0x6A),width: 3),
               color: Colors.white,
                borderRadius: BorderRadius.circular(22)
             ),
@@ -46,22 +46,22 @@ class _ItemState extends State<Item> {
                   ),
                 ),
                 SizedBox(height: 30,),
-                Text( profile.capacity,style: TextStyle(
+                Text( 'Capacity : ${profile.capacity}',style: TextStyle(
                   fontSize: 20,fontWeight: FontWeight.w500,
                   color: Color.fromARGB(0xFF, 0x98, 0x31, 0x6A)
                 ),),
                 SizedBox(height: 30,),
-                Text(profile.veg,style: TextStyle(
+                Text('Food Type: ${profile.veg}',style: TextStyle(
                     fontSize: 20,fontWeight: FontWeight.w500,
                   color: Color.fromARGB(0xFF, 0x98, 0x31, 0x6A)
                 ),),
                 SizedBox(height: 30,),
-                Text(profile.date,style: TextStyle(
+                Text('Date : ${profile.date}',style: TextStyle(
                     fontSize: 20,fontWeight: FontWeight.w500,
                   color: Color.fromARGB(0xFF, 0x98, 0x31, 0x6A)
                 ),),
-                SizedBox(height: 50,),
-                Divider(color: Color.fromARGB(0xFF, 0x98, 0x31, 0x6A),thickness: 2,),
+                SizedBox(height: 10,),
+                // Divider(color: Color.fromARGB(0xFF, 0x98, 0x31, 0x6A),thickness: 2,),
                 SizedBox(height: 40,),
                 ElevatedButton(
                     style: ButtonStyle(
@@ -73,7 +73,7 @@ class _ItemState extends State<Item> {
                     onPressed: ()=> print("YES"),/* Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => mail(profile: profile,))) , */ child: Text("Accept",style: TextStyle(color: Colors.white),))
+                        builder: (context) => mail(profile: profile,))) , */ child: Text("Connect",style: TextStyle(color: Colors.white),))
               ],
             ),
           ),

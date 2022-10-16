@@ -29,7 +29,7 @@ class _TileState extends State<Tile> {
             width: 150,
             decoration: BoxDecoration(
                 border: Border.all(
-                    color: Color.fromARGB(0xff, 0x98, 0x31, 0x6A), width: 1.2),
+                    color: Color.fromARGB(0xff, 0x98, 0x31, 0x6A), width: 3),
                 color: Colors.white,
                 borderRadius:
                 BorderRadius.circular(20)),
@@ -40,7 +40,7 @@ class _TileState extends State<Tile> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    border: Border.all( ),
+                    border: Border.all(),
                       borderRadius:
                       BorderRadius.circular(400)),
                   height: MediaQuery.of(context)
@@ -52,21 +52,26 @@ class _TileState extends State<Tile> {
                       .width *
                       0.27,
                   child: ClipRRect(
-                    borderRadius:
-                    BorderRadius.circular(15),
+                    borderRadius:BorderRadius.circular(15),
                     child: Image.asset(
                       "images/food.jpeg",
                       fit: BoxFit.cover,
                     ),
                   ),
                 ),
-                Text(
-                  profile.capacity,
-                  style: TextStyle(fontSize: 15,color: Color.fromARGB(0xFF, 0x98, 0x31, 0x6A)),
+                SizedBox(
+                    height:5
                 ),
                 Text(
-                  profile.date,
-                  style: TextStyle(fontSize: 15,color: Color.fromARGB(0xFF, 0x98, 0x31, 0x6A)),
+                  'Capacity : ${profile.capacity}',
+                  style: TextStyle(fontSize: 12,color: Color.fromARGB(0xFF, 0x98, 0x31, 0x6A)),
+                ),
+                SizedBox(
+                  height:5
+                ),
+                Text(
+                  'Date : ${profile.date}',
+                  style: TextStyle(fontSize: 12,color: Color.fromARGB(0xFF, 0x98, 0x31, 0x6A)),
                 ),
               ],
             ),
