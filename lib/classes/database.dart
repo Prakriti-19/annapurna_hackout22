@@ -27,6 +27,8 @@ class DatabaseNGO{
 
   Future<void> updateUserData(String email,String uid) async {
     mail=email;
+    print("hdwwewrwrv");
+    print(mail);
     return await profile.doc(uid).set({
       'email': email,
       'uid': uid,
@@ -36,7 +38,9 @@ class DatabaseNGO{
 class inventory{
   final String uid;
   inventory({required this.uid});
-  Future<void> updateUserData(String capacity, String veg, double latitude, double longitude, String date) async {
+  Future<void> updateUserData(String capacity, String veg, double latitude, double longitude, String date, String url) async {
+    print("hfjkhvkhvkerv");
+    print(mail);
     DocumentReference productCollection =
     FirebaseFirestore.instance.collection('Inventory').doc();
     productCollection.set({
@@ -48,6 +52,7 @@ class inventory{
       'userid': productCollection.id,
       'date': date,
       'productid':"",
+      'url':url,
     });
   }
 }
