@@ -77,7 +77,7 @@ class _DonateState extends State<Donate> {
         await inventory(uid: productCollection.id).updateUserData(capacity, veg,
          latitude,
          longitude,
-         date,);
+         date,url.toString(),);
 
 
         uploadPic();
