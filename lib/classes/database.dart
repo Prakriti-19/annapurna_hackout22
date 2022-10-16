@@ -51,7 +51,6 @@ class inventory{
       'veg': veg,
       'userid': productCollection.id,
       'date': date,
-      'productid':"",
       'url':url,
     });
   }

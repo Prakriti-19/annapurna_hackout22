@@ -81,7 +81,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                 lat.add(element['latitude']);
                                 long.add(element['longitude']);
                                 uid.add(element['userid']);
-                                pid.add(element['productid']);
                                                            });
                               c=documentSnapshotList.length;
 
@@ -98,7 +97,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                         latitude: lat[i],
                                         longitude: long[i],
                                         veg: veg[i],
-                                        productid: pid[i],
                                         userid: uid[i],
                                         date: date[i],
                                         //    url: url[i],
